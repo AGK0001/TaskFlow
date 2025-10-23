@@ -32,51 +32,11 @@
     ]
 ];
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo $page_title; ?></title>
-</head>
-<body>
     <?php include "../app/views/header.php"; ?>
-    <h2>Tareas Pendientes</h2>
-    <ul>
-        <?php
-    foreach ($tasks as $task) {
-        // Clase base para cada tarea
-        $taskClasses = 'task-item';
 
-        // Si la tarea está completada, añade la clase 'completed'
-        if ($task['completed']) {
-            $taskClasses .= ' completed';
-        }
-
-        // Añade la clase de prioridad según el valor de 'priority'
-        switch ($task['priority']) {
-            case 'alta':
-                $taskClasses .= ' priority-alta';
-                break;
-            case 'media':
-                $taskClasses .= ' priority-media';
-                break;
-            case 'baja':
-                $taskClasses .= ' priority-baja';
-                break;
-        }
-
-        // Imprime la tarea como un elemento <li>
-        echo "<li class='$taskClasses'>{$task['title']}</li>";
-    }
-    ?>
-    </ul>
-<main>
     <h2>Perfil del Usuario</h2>
         <p><strong>Nombre:</strong> <?php echo $userName; ?></p>
         <p><strong>Edad:</strong> <?php echo $userAge; ?> años</p>
         <p><strong>Estado de la cuenta:</strong> Usuario <?php echo $isPremiumUser ? "Premium" : "Estándar"; ?></p>
-</main>
-</body>
-<?php include "../app/views/footer.php"; ?>
-</html>
+
+    <?php include "../app/views/footer.php"; ?>
