@@ -4,35 +4,17 @@
   $userName = "Abel Gámez Kmiec"; // Tipo String
   $userAge = 19;                 // Tipo Integer
   $isPremiumUser = true;        // Tipo Boolean
-  $tasks=[
-    [
-        'title' => 'Preparar la presentación del proyecto',
-        'completed' => false,
-        'priority' => 'alta'
-    ],
-    [
-        'title' => 'Enviar informe semanal al jefe',
-        'completed' => true,
-        'priority' => 'media'
-    ],
-    [
-        'title' => 'Actualizar el sitio web',
-        'completed' => false,
-        'priority' => 'alta'
-    ],
-    [
-        'title' => 'Hacer copia de seguridad de los datos',
-        'completed' => true,
-        'priority' => 'baja'
-    ],
-    [
-        'title' => 'Revisar correos pendientes',
-        'completed' => false,
-        'priority' => 'media'
-    ]
+  $tareas = [
+    ['titulo' => 'Configurar el entorno de desarrollo', 'completado' => true, 'prioridad' => 'alta'],
+    ['titulo' => 'Crear la estructura de carpetas', 'completado' => true, 'prioridad' => 'alta'],
+    ['titulo' => 'Diseñar la base de datos', 'completado' => false, 'prioridad' => 'media'],
+    ['titulo' => 'Implementar el sistema de login', 'completado' => false, 'prioridad' => 'alta'],
+    ['titulo' => 'Crear la vista de tareas', 'completado' => false, 'prioridad' => 'baja']
 ];
+    require_once "../app/functions.php";
+    include "../app/views/header.php"; 
 ?>
-    <?php include "../app/views/header.php"; ?>
+    
 
     <h2>Perfil del Usuario</h2>
         <p><strong>Nombre:</strong> <?php echo $userName; ?></p>
